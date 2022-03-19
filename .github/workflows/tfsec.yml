@@ -28,6 +28,7 @@ jobs:
 
       - name: Run tfsec
         uses: tfsec/tfsec-sarif-action@9a83b5c3524f825c020e356335855741fd02745f
+        id: tfsec
         with:
           sarif_file: tfsec.sarif         
 
@@ -36,3 +37,4 @@ jobs:
         with:
           # Path to SARIF file relative to the root of the repository
           sarif_file: tfsec.sarif  
+          
