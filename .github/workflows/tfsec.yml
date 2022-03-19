@@ -42,7 +42,6 @@ jobs:
       - uses: actions/checkout@v2
         if: always()
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
           name: Tfsec results
           conclusion: ${{ job.status }}
           output: |
