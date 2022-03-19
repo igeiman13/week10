@@ -37,6 +37,7 @@ jobs:
         with:
           # Path to SARIF file relative to the root of the repository
           sarif_file: tfsec.sarif  
+          
       - uses: LouisBrunner/checks-action@v1.1.1
         if: always()
         with:
@@ -44,4 +45,4 @@ jobs:
           name: Tfsec results
           conclusion: ${{ job.status }}
           output: |
-            {"summary":${{ steps.tfsec.outputs.summary }}}
+            {"summary": "TFsec scan completed" }
