@@ -44,6 +44,6 @@ jobs:
         with:
           name: Tfsec results
           conclusion: ${{ job.status }}
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           output: |
             {"summary": "TFsec scan completed" }
